@@ -26,8 +26,7 @@
 
     header {
       height: 72px;
-      background: rgba(255, 255, 255, 0.92);
-
+      background: rgba(255, 255, 255, 0.94);
       border-bottom: 1px solid #d5edf9;
 
       display: flex;
@@ -37,7 +36,6 @@
 
       position: sticky;
       top: 0;
-
       z-index: 100;
 
       backdrop-filter: blur(12px);
@@ -46,23 +44,18 @@
     .header-content {
       width: 100%;
       max-width: 1150px;
-
       margin: auto;
 
       display: flex;
       align-items: center;
-
       gap: 18px;
     }
 
     .brand {
       font-size: 21px;
       font-weight: 900;
-
       color: #168dcc;
-
       letter-spacing: 1px;
-
       white-space: nowrap;
     }
 
@@ -91,7 +84,6 @@
 
       font-family: inherit;
       font-size: 14px;
-
       color: #17202a;
     }
 
@@ -103,9 +95,7 @@
 
     main {
       max-width: 1150px;
-
       margin: auto;
-
       padding: 25px 16px;
     }
 
@@ -113,23 +103,18 @@
 
     .welcome {
       text-align: center;
-
       padding: 28px 10px 32px;
     }
 
     .welcome h1 {
       font-size: 29px;
-
       font-weight: 900;
-
       color: #147eaf;
-
       margin-bottom: 10px;
     }
 
     .welcome p {
       color: #668b9d;
-
       font-size: 14px;
     }
 
@@ -137,7 +122,6 @@
 
     .categories {
       display: flex;
-
       gap: 9px;
 
       overflow-x: auto;
@@ -154,8 +138,7 @@
     .category {
       flex-shrink: 0;
 
-      background: #ffffff;
-
+      background: white;
       color: #518096;
 
       padding: 10px 17px;
@@ -177,9 +160,7 @@
 
     .category.active {
       background: #53b7e5;
-
       color: white;
-
       border-color: #53b7e5;
 
       box-shadow: 0 5px 15px rgba(83, 183, 229, 0.25);
@@ -189,7 +170,6 @@
 
     .feed {
       columns: 2;
-
       column-gap: 15px;
     }
 
@@ -217,19 +197,16 @@
 
     .post img {
       width: 100%;
-
       display: block;
     }
 
     .post-info {
       background: white;
-
       padding: 13px;
     }
 
     .post-title {
       font-size: 14px;
-
       font-weight: 700;
 
       margin-bottom: 10px;
@@ -239,7 +216,6 @@
 
     .actions {
       display: flex;
-
       justify-content: space-between;
 
       color: #7a9aa8;
@@ -249,12 +225,27 @@
 
     .action {
       cursor: pointer;
-
       transition: 0.2s;
+
+      user-select: none;
     }
 
     .action:hover {
       color: #159bd3;
+    }
+
+    /* ================= LIKE ================= */
+
+    .like-btn.liked {
+      color: #ef476f;
+      font-weight: bold;
+    }
+
+    /* ================= SAVE ================= */
+
+    .save-btn.saved {
+      color: #159bd3;
+      font-weight: bold;
     }
 
     /* ================= BOTTOM NAV ================= */
@@ -263,9 +254,7 @@
       position: fixed;
 
       bottom: 0;
-
       right: 0;
-
       left: 0;
 
       height: 70px;
@@ -277,7 +266,6 @@
       display: flex;
 
       justify-content: space-around;
-
       align-items: center;
 
       z-index: 200;
@@ -307,7 +295,6 @@
 
     .create {
       width: 49px;
-
       height: 49px;
 
       border-radius: 50%;
@@ -319,7 +306,6 @@
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       font-size: 28px;
@@ -348,8 +334,6 @@
       }
 
     }
-
-    /* ================= LARGE DESKTOP ================= */
 
     @media (min-width: 1100px) {
 
@@ -464,6 +448,8 @@
     <section class="feed">
 
 
+      <!-- POST 1 -->
+
       <article class="post">
 
         <img
@@ -479,15 +465,23 @@
 
           <div class="actions">
 
-            <span class="action">
-              ♡ 124
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                124
+              </span>
+
             </span>
+
 
             <span class="action">
               💬 18
             </span>
 
-            <span class="action">
+
+            <span class="action save-btn">
               📌
             </span>
 
@@ -498,6 +492,8 @@
       </article>
 
 
+
+      <!-- POST 2 -->
 
       <article class="post">
 
@@ -509,20 +505,28 @@
         <div class="post-info">
 
           <div class="post-title">
-            طراحی مدرن
+            طراحی مدرن ✨
           </div>
 
           <div class="actions">
 
-            <span class="action">
-              ♡ 86
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                86
+              </span>
+
             </span>
+
 
             <span class="action">
               💬 9
             </span>
 
-            <span class="action">
+
+            <span class="action save-btn">
               📌
             </span>
 
@@ -533,6 +537,8 @@
       </article>
 
 
+
+      <!-- POST 3 -->
 
       <article class="post">
 
@@ -544,20 +550,28 @@
         <div class="post-info">
 
           <div class="post-title">
-            الهام برای طراحی
+            الهام برای طراحی 💡
           </div>
 
           <div class="actions">
 
-            <span class="action">
-              ♡ 203
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                203
+              </span>
+
             </span>
+
 
             <span class="action">
               💬 27
             </span>
 
-            <span class="action">
+
+            <span class="action save-btn">
               📌
             </span>
 
@@ -569,6 +583,8 @@
 
 
 
+      <!-- POST 4 -->
+
       <article class="post">
 
         <img
@@ -579,20 +595,118 @@
         <div class="post-info">
 
           <div class="post-title">
-            فضای مینیمال
+            فضای مینیمال 🏠
           </div>
 
           <div class="actions">
 
-            <span class="action">
-              ♡ 154
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                154
+              </span>
+
             </span>
+
 
             <span class="action">
               💬 14
             </span>
 
+
+            <span class="action save-btn">
+              📌
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- POST 5 -->
+
+      <article class="post">
+
+        <img
+          src="https://picsum.photos/500/650?random=5"
+          alt="استایل"
+        >
+
+        <div class="post-info">
+
+          <div class="post-title">
+            ایده‌های استایل 👕
+          </div>
+
+          <div class="actions">
+
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                97
+              </span>
+
+            </span>
+
+
             <span class="action">
+              💬 12
+            </span>
+
+
+            <span class="action save-btn">
+              📌
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- POST 6 -->
+
+      <article class="post">
+
+        <img
+          src="https://picsum.photos/500/800?random=6"
+          alt="هنر دیجیتال"
+        >
+
+        <div class="post-info">
+
+          <div class="post-title">
+            هنر دیجیتال 🖼️
+          </div>
+
+          <div class="actions">
+
+            <span class="action like-btn">
+
+              ♡
+
+              <span class="like-count">
+                241
+              </span>
+
+            </span>
+
+
+            <span class="action">
+              💬 31
+            </span>
+
+
+            <span class="action save-btn">
               📌
             </span>
 
@@ -666,6 +780,111 @@
   </nav>
 
 
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* ❤️ LIKE */
+
+    const likeButtons =
+      document.querySelectorAll(".like-btn");
+
+
+    likeButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const count =
+          button.querySelector(".like-count");
+
+
+        let number =
+          parseInt(count.textContent);
+
+
+        if (button.classList.contains("liked")) {
+
+          number--;
+
+          button.classList.remove("liked");
+
+          button.firstChild.textContent = "♡";
+
+        } else {
+
+          number++;
+
+          button.classList.add("liked");
+
+          button.firstChild.textContent = "♥";
+
+        }
+
+
+        count.textContent = number;
+
+      });
+
+    });
+
+
+
+    /* 📌 SAVE */
+
+    const saveButtons =
+      document.querySelectorAll(".save-btn");
+
+
+    saveButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        button.classList.toggle("saved");
+
+
+        if (button.classList.contains("saved")) {
+
+          button.textContent = "📍";
+
+        } else {
+
+          button.textContent = "📌";
+
+        }
+
+      });
+
+    });
+
+
+
+    /* 🏷️ CATEGORIES */
+
+    const categories =
+      document.querySelectorAll(".category");
+
+
+    categories.forEach(category => {
+
+      category.addEventListener("click", () => {
+
+        categories.forEach(item => {
+
+          item.classList.remove("active");
+
+        });
+
+
+        category.classList.add("active");
+
+      });
+
+    });
+
+  </script>
+
+
 </body>
 
-  </html>
+</html>
